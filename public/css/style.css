@@ -1,0 +1,12 @@
+body {
+    font-family: monospace;
+}
+
+header {
+    max-width: 1440px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+    border: 2px dashed cadetblue;
+    text-align: center;
+}
