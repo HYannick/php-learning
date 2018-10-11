@@ -10,3 +10,7 @@ header {
     border: 2px dashed cadetblue;
     text-align: center;
 }
+
+header ul {
+    list-style: none;
+}

@@ -2,7 +2,7 @@
 
 return [
     'database' => [
-        'name' => 'mytodo',
+        'name' => 'mytodos',
         'username' => 'root',
         'password' => '',
         'connection' => 'mysql:host=127.0.0.1',
