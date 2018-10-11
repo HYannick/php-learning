@@ -8,7 +8,8 @@ class Request
         return trim($parsedUrl, '/');
     }
 
-    public static function method() {
+    public static function method()
+    {
         return $_SERVER['REQUEST_METHOD'];
     }
 }

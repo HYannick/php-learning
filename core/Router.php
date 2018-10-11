@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Core;
 class Router
 {
     protected $routes = [
@@ -19,17 +19,22 @@ class Router
         $this->routes = $routes;
     }
 
-    public function get($uri, $controller) {
+    public function get($uri, $controller)
+    {
         $this->routes['GET'][$uri] = $controller;
     }
 
-    public function post($uri, $controller) {
+    public function post($uri, $controller)
+    {
         $this->routes['POST'][$uri] = $controller;
     }
 
-    protected function callAction($controller, $action) {
+    protected function callAction($controller, $action)
+    {
+
+        $controller = "App\\Controllers\\{$controller}";
         $controller = new $controller;
-        if(!method_exists($controller, $action)) {
+        if (!method_exists($controller, $action)) {
             throw new Exception("$controller does not respond to the $action action");
         }
 

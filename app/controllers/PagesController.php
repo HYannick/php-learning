@@ -1,8 +1,12 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\App;
 class PagesController
 {
-    public function home() {
+    public function home()
+    {
 
         $tasks = App::get('database')->selectAll('todos');
 
@@ -12,11 +16,13 @@ class PagesController
         ]);
     }
 
-    public function about() {
+    public function about()
+    {
         return view('about');
     }
 
-    public function contact() {
+    public function contact()
+    {
         return view('contact');
     }
 }
